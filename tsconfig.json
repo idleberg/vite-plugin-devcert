@@ -1,0 +1,9 @@
+{
+	"extends": "@total-typescript/tsconfig/tsc/no-dom/library",
+	"compilerOptions": {
+		"allowImportingTsExtensions": true,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"noEmit": true
+	}
+}

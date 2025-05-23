@@ -1,0 +1,59 @@
+{
+	"name": "@idleberg/vite-plugin-devcert",
+	"version": "0.0.0",
+	"description": "A Vite plugin to generate trusted SSL/TLS certificates for local development",
+	"license": "MIT",
+	"author": "Jan T. Sott",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/idleberg/@idleberg/vite-plugin-devcert"
+	},
+	"keywords": [
+		"vite-plugin",
+		"vite-server",
+		"server",
+		"http-server",
+		"certificate",
+		"ssl",
+		"tls"
+	],
+	"type": "module",
+	"exports": "./dist/plugin.js",
+	"types": "./dist/plugin.d.ts",
+	"engines": {
+		"node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+	},
+	"files": [
+		"dist/",
+		"LICENSE",
+		"README.md"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"lint": "biome check --no-errors-on-unmatched --vcs-enabled=true --vcs-use-ignore-file=true",
+		"publish:jsr": "deno publish",
+		"publish:npm": "np -any-branch",
+		"test": "echo \"No tests specified\" && exit 0"
+	},
+	"dependencies": {
+		"@expo/devcert": "^1.2.0",
+		"log-symbols": "^7.0.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@total-typescript/tsconfig": "^1.0.4",
+		"@types/node": "^22.15.21",
+		"lefthook": "^1.11.13",
+		"np": "^10.2.0",
+		"tsup": "^8.5.0",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5"
+	},
+	"peerDependencies": {
+		"vite": ">=1.0.0 <7.0.0"
+	},
+	"packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
+}

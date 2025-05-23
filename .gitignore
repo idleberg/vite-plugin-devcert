@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.eslintcache
+
+# Development
+.env
+index.html
+/vite.config.*
+vite*.config.ts.timestamp-*
