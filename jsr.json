@@ -1,6 +1,6 @@
 {
 	"name": "@idleberg/vite-plugin-devcert",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"exports": "./src/plugin.ts",
 	"publish": {
 		"include": ["src/", "jsr.json", "LICENSE", "README.md"]
