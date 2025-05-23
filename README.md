@@ -8,7 +8,7 @@
 [![CI: Node](https://img.shields.io/github/actions/workflow/status/idleberg/vite-plugin-devcert/node.yml?logo=nodedotjs&logoColor=white&style=for-the-badge)](https://github.com/idleberg/vite-plugin-devcert/actions/workflows/node.yml)
 [![CI: Deno](https://img.shields.io/github/actions/workflow/status/idleberg/vite-plugin-devcert/deno.yml?logo=deno&logoColor=white&style=for-the-badge)](https://github.com/idleberg/vite-plugin-devcert/actions/workflows/deno.yml)
 
-> ![NOTE]
+> [!NOTE]
 > This plugin is based on `@expo/devcert`, an actively maintained version of `devcert`. Read about [How it works](https://github.com/expo/devcert/tree/master?tab=readme-ov-file#how-it-works) and what the [Security Concerns](https://github.com/expo/devcert/tree/master?tab=readme-ov-file#security-concerns).
 
 ## Installation
