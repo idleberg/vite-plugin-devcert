@@ -6,7 +6,7 @@
 	"author": "Jan T. Sott",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/idleberg/@idleberg/vite-plugin-devcert"
+		"url": "https://github.com/idleberg/vite-plugin-devcert"
 	},
 	"keywords": [
 		"vite-plugin",
