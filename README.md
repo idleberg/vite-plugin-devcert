@@ -46,7 +46,7 @@ export default defineConfig({
 
 If `certutil` is not installed already (for updating NSS databases; e.g. Firefox), do not attempt to install it. [Read more](https://github.com/expo/devcert#skiphostsfile).
 
-### `options.skipCertutil``
+#### `options.skipCertutil`
 
 Do not update your systems host file with the domain name of the certificate. [Read more](https://github.com/expo/devcert#skipcertutil).
 
