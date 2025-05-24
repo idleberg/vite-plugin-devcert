@@ -44,7 +44,7 @@ export default function DevcertPlugin(options?: PluginOptions): Plugin {
 				[
 					`\n${logSymbols.info} Generating certificate for "${domain}".`,
 					'You may be prompted to enter your password to allow the creation of root certificate authority.',
-					'\nPlease refer to documentation at https://github.com/expo/devcert#how-it-works for details on that.\n',
+					'\nPlease refer to documentation at https://github.com/expo/devcert#how-it-works for details.\n',
 				].join(' '),
 			);
 
