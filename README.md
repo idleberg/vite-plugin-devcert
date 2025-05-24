@@ -52,8 +52,8 @@ Do not update your systems host file with the domain name of the certificate. [R
 
 ## Related
 
-- [vite-plugin-basic-ssl](https://github.com/vitejs/vite-plugin-basic-ssl)
-- [vite-plugin-mkcert](https://github.com/vite-plugin/vite-plugin-mkcert)
+- [vite-plugin-basic-ssl](https://www.npmjs.com/package/@vitejs/plugin-basic-ssl)
+- [vite-plugin-mkcert](https://www.npmjs.com/package/vite-plugin-mkcert)
 
 ## License
 
