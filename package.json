@@ -10,10 +10,8 @@
 	},
 	"keywords": [
 		"vite-plugin",
-		"vite-server",
-		"server",
-		"http-server",
 		"certificate",
+		"https",
 		"ssl",
 		"tls"
 	],
