@@ -34,7 +34,7 @@
 		"prepare": "lefthook install",
 		"publish:jsr": "deno publish",
 		"publish:npm": "np --any-branch",
-		"test": "playwright test --config e2e/playwright.config.ts",
+		"test": "playwright test",
 		"test:server": "concurrently -n 'server,client' -c 'blue,green' 'npm:test:server:http' 'npm:test:server:https'",
 		"test:server:http": "vite --config e2e/vite.config-http.ts",
 		"test:server:https": "vite --config e2e/vite.config-https.ts"
