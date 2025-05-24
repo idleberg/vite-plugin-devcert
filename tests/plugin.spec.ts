@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('should get no security details from HTTP responsse', async ({ page }) => {
+test('should get no security details from HTTP response', async ({ page }) => {
 	const [response] = await Promise.all([
 		page.waitForResponse((resp) => resp.url().startsWith('http://')),
 		page.goto('http://localhost:7001'),
