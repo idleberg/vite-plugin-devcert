@@ -1,4 +1,5 @@
-import { defineConfig, devices } from '@playwright/test';
+import { env } from 'node:process';
+import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
 	use: {
@@ -6,6 +7,6 @@ export default defineConfig({
 	},
 	webServer: {
 		command: 'npm run test:server',
-		reuseExistingServer: !process.env.CI,
+		reuseExistingServer: !env.CI,
 	},
 });
