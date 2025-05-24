@@ -7,3 +7,6 @@ dist/
 index.html
 /vite.config.*
 vite*.config.ts.timestamp-*
+
+# Test
+test-results/
