@@ -9,7 +9,7 @@
 [![CI: Deno](https://img.shields.io/github/actions/workflow/status/idleberg/vite-plugin-devcert/deno.yml?logo=deno&logoColor=white&style=for-the-badge)](https://github.com/idleberg/vite-plugin-devcert/actions/workflows/deno.yml)
 
 > [!IMPORTANT]
-> This plugin is based on `@expo/devcert`, an actively maintained fork of `devcert`. Read about [how it works](https://github.com/expo/devcert/tree/master?tab=readme-ov-file#how-it-works) and what the [security concerns](https://github.com/expo/devcert/tree/master?tab=readme-ov-file#security-concerns) are.
+> This plugin is based on `@expo/devcert`, an actively maintained fork of `devcert`. Read about [how it works](https://github.com/expo/devcert/tree/master?tab=readme-ov-file#how-it-works) and whow it adresses [security concerns](https://github.com/expo/devcert/tree/master?tab=readme-ov-file#security-concerns).
 
 ## Installation
 
