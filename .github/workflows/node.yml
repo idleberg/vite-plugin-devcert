@@ -1,22 +1,22 @@
-name: 'Run tests on NodeJS'
+name: "Run tests on NodeJS"
 
 on:
   push:
     paths:
-    - '.github/workflows/node.yml'
-    - 'src/**'
-    - 'tests/**'
-    - 'types/**'
-    - 'package.json'
-    - 'pnpm-lock.yaml'
+      - ".github/workflows/node.yml"
+      - "src/**"
+      - "tests/**"
+      - "types/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
   pull_request:
     paths:
-    - '.github/workflows/node.yml'
-    - 'src/**'
-    - 'tests/**'
-    - 'types/**'
-    - 'package.json'
-    - 'pnpm-lock.yaml'
+      - ".github/workflows/node.yml"
+      - "src/**"
+      - "tests/**"
+      - "types/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
   workflow_dispatch:
 
 jobs:
@@ -25,44 +25,46 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: ['lts/*', '*']
+        node-version: ["lts/*", "*"]
+        vite-version: ["1", "2", "3", "4", "5", "6"]
 
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 10
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 10
 
-    - uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Enable Corepack
-      run: |
-        corepack prepare pnpm@9.15.3 --activate
-        corepack enable
+      - name: Enable Corepack
+        run: |
+          corepack prepare pnpm@9.15.3 --activate
+          corepack enable
 
-    - name: Get pnpm store directory
-      id: pnpm-cache
-      run: |
-        echo "::set-output name=pnpm_store_path::$(pnpm store path)"
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_store_path::$(pnpm store path)"
 
-    - uses: actions/cache@v4
-      name: Set up pnpm cache
-      with:
-        path: ${{ steps.pnpm-cache.outputs.pnpm_store_path }}
-        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-pnpm-store-
+      - uses: actions/cache@v4
+        name: Set up pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_store_path }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-    - name: Install dependencies
-      run: |
-        pnpm install --frozen-lockfile --strict-peer-dependencies
+      - name: Install dependencies
+        run: |
+          pnpm install --frozen-lockfile --strict-peer-dependencies
+          pnpm install vite@${{ matrix.vite-version }}
 
-    - name: Lint Source
-      run: pnpm run --if-present lint
+      - name: Lint Source
+        run: pnpm run --if-present lint
 
-    - name: Build Source
-      run: pnpm run --if-present build
+      - name: Build Source
+        run: pnpm run --if-present build
 
     # - name: Run Tests
-      # run: pnpm run --if-present test
+    # run: pnpm run --if-present test
