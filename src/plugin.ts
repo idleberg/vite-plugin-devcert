@@ -8,13 +8,13 @@ type PluginOptions = {
 	 * If `certutil` is not installed already (for updating NSS databases; e.g. Firefox), do not attempt to install it.
 	 * {@see {@link https://github.com/expo/devcert#skiphostsfile}}
 	 */
-	skipHostsFile: boolean;
+	skipHostsFile?: boolean;
 
 	/**
 	 * Do not update your systems host file with the domain name of the certificate.
 	 * {@see {@link https://github.com/expo/devcert#skipcertutil}}
 	 */
-	skipCertutil: boolean;
+	skipCertutil?: boolean;
 };
 
 /**
@@ -22,7 +22,7 @@ type PluginOptions = {
  * @param options - options passed on to `@expo/devcert`
  * @returns a Vite plugin
  */
-export default function DevcertPlugin(options?: PluginOptions): Plugin {
+export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 	return {
 		name: '@idleberg/vite-plugin-devcert',
 		config: async (userConfig: UserConfig, { command }) => {
