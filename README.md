@@ -9,7 +9,7 @@
 [![CI: Deno](https://img.shields.io/github/actions/workflow/status/idleberg/vite-plugin-devcert/deno.yml?logo=deno&logoColor=white&style=for-the-badge)](https://github.com/idleberg/vite-plugin-devcert/actions/workflows/deno.yml)
 
 > [!IMPORTANT]
-> This plugin is based on [`@expo/devcert`](https://www.npmjs.com/package/@expo/devcert), an actively maintained fork of `devcert`. Read about [how it works](https://github.com/expo/devcert/#how-it-works) and adresses your [security concerns](https://github.com/expo/devcert/#security-concerns).
+> This plugin is based on [`@expo/devcert`](https://www.npmjs.com/package/@expo/devcert), an actively maintained fork of `devcert`. Read about [how it works](https://github.com/expo/devcert/#how-it-works) and what it means for [security](https://github.com/expo/devcert/#security-concerns).
 
 ## Installation
 
