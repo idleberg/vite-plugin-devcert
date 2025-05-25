@@ -34,10 +34,12 @@
 		"prepare": "lefthook install",
 		"publish:jsr": "deno publish",
 		"publish:npm": "np --any-branch",
-		"test": "playwright test",
-		"test:server": "concurrently -n 'server,client' -c 'blue,green' 'npm:test:server:http' 'npm:test:server:https'",
-		"test:server:http": "vite --config e2e/vite.config-http.ts",
-		"test:server:https": "vite --config e2e/vite.config-https.ts"
+		"server": "concurrently -n 'server,client' -c 'blue,green' 'npm:server:*'",
+		"server:http": "vite --config e2e/vite.config-http.ts",
+		"server:https": "vite --config e2e/vite.config-https.ts",
+		"test": "concurrently -n 'server,client' -c 'blue,green' 'npm:test:e2e' 'npm:test:unit'",
+		"test:e2e": "playwright test",
+		"test:unit": "vitest run --dir src"
 	},
 	"dependencies": {
 		"@expo/devcert": "^1.2.0",
@@ -55,7 +57,8 @@
 		"np": "^10.2.0",
 		"tsup": "^8.5.0",
 		"typescript": "^5.8.3",
-		"vite": "^6.3.5"
+		"vite": "^6.3.5",
+		"vitest": "^3.1.4"
 	},
 	"peerDependencies": {
 		"vite": ">=1.0.0 <7.0.0"

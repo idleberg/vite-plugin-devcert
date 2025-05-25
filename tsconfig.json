@@ -4,6 +4,7 @@
 		"allowImportingTsExtensions": true,
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
-		"noEmit": true
+		"noEmit": true,
+		"types": ["vitest/globals"]
 	}
 }
