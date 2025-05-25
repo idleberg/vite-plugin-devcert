@@ -19,7 +19,7 @@ type PluginOptions = {
 
 /**
  * Generate trusted SSL/TLS certificates for local development.
- * @param options - options passed to `@expo/devcert`
+ * @param options - options passed on to `@expo/devcert`
  * @returns a Vite plugin
  */
 export default function DevcertPlugin(options?: PluginOptions): Plugin {
