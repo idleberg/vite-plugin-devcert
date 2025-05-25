@@ -16,13 +16,13 @@
 On NodeJS or Bun you can install from npm
 
 ```shell
-npm install @idleberg/vite-plugin-devcert
+npm install @idleberg/vite-plugin-devcert @expo/devcert
 ```
 
 On Deno you can install using JSR
 
 ```shell
-deno add jsr:@idleberg/vite-plugin-devcert
+deno add jsr:@idleberg/vite-plugin-devcert npm:@expo/devcert
 ```
 
 ## Usage
