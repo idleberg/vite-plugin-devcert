@@ -29,16 +29,16 @@ deno add jsr:@idleberg/vite-plugin-devcert npm:@expo/devcert
 
 ```javascript
 import { defineConfig } from "vite";
-import devCert from "@idleberg/vite-plugin-devcert";
+import devcert from "@idleberg/vite-plugin-devcert";
 
 export default defineConfig({
-	plugins: [devCert()],
+	plugins: [devcert()],
 });
 ```
 
 ### API
 
-`devCert(options?)`
+`devcert(options?)`
 
 ### Options
 
