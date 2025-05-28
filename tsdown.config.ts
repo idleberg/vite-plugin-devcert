@@ -10,6 +10,5 @@ export default defineConfig((options) => {
 		entry: ['src/plugin.ts'],
 		format: 'esm',
 		minify: isProduction,
-		// treeshake: 'recommended',
 	};
 });
