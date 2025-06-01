@@ -30,10 +30,11 @@ jobs:
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install Peer Dependencies
-        run: deno cache npm:@expo/devcert npm:vite \
-          --allow-scripts \
-          --no-lock \
-          --node-modules-dir auto
+        run: |
+          deno cache npm:@expo/devcert npm:vite \
+            --allow-scripts \
+            --no-lock \
+            --node-modules-dir auto
 
       - run: |
           deno lint \
