@@ -34,7 +34,7 @@ jobs:
 
       - uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
 
       - uses: actions/cache@v4
         name: Set up Deno cache
@@ -45,13 +45,15 @@ jobs:
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install Vite
-        run: deno cache npm:${{ matrix.vite-version }} --allow-scripts
+        run: deno cache npm:${{ matrix.vite-version }} --allow-scripts --node-modules-dir auto
 
       - name: Install Playwright browsers
         run: deno run --allow-all npm:playwright install --with-deps
 
       - name: Lint Source
-        run: deno lint --rules-exclude=no-explicit-any --ignore=node_modules **/*.ts
+        run: deno lint --ignore=node_modules **/*.ts
 
       - name: Run Tests
-        run: deno run --allow-all --unstable-sloppy-imports npm:uvu tests
+        run: |
+          deno run --allow-all npm:vitest run
+          # deno run --allow-all npm:playwright test
