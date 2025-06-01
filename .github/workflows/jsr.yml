@@ -28,6 +28,10 @@ jobs:
             ~/.deno
             ~/.cache/deno
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Install Vite
+        run: deno cache npm:vite --allow-scripts --node-modules-dir auto
+
       - run: |
           deno lint \
             --ignore=node_modules src tests \
