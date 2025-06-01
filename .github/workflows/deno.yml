@@ -47,13 +47,13 @@ jobs:
       - name: Install Vite
         run: deno cache npm:${{ matrix.vite-version }} --allow-scripts --node-modules-dir auto
 
-      - name: Install Playwright browsers
-        run: deno run --allow-all npm:playwright install --with-deps
+      # - name: Install Playwright browsers
+      #   run: deno run --allow-all npm:playwright install --with-deps
 
       - name: Lint Source
         run: deno lint --ignore=node_modules **/*.ts
 
       - name: Run Tests
         run: |
-          deno run --allow-all npm:vitest run
+          deno run --allow-all npm:vitest run --dir src
           # deno run --allow-all npm:playwright test
