@@ -1,3 +1,4 @@
+import { env } from 'node:process';
 import { expect, test } from '@playwright/test';
 
 test('should get no security details from HTTP response', async ({ page }) => {
@@ -12,6 +13,10 @@ test('should get no security details from HTTP response', async ({ page }) => {
 });
 
 test('should get security details from HTTPS response', async ({ page }) => {
+	if (env.CI) {
+		test.skip(true, 'Skipping test in CI environment since it requires interactive user input');
+	}
+
 	const [response] = await Promise.all([
 		page.waitForResponse((resp) => resp.url().startsWith('https://')),
 		page.goto('https://localhost:7002'),
