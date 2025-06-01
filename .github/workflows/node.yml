@@ -60,11 +60,14 @@ jobs:
           pnpm install --frozen-lockfile --strict-peer-dependencies
           pnpm install ${{ matrix.vite-version }}
 
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+
       - name: Lint Source
         run: pnpm run --if-present lint
 
       - name: Build Source
         run: pnpm run --if-present build
 
-    # - name: Run Tests
-    # run: pnpm run --if-present test
+      - name: Run Tests
+        run: pnpm run --if-present test
