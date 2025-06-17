@@ -13,17 +13,20 @@
 
 ## Installation
 
-On NodeJS or Bun, install the plugin and its peer dependencies from npm:
+On NodeJS or Bun, install from npm:
 
 ```shell
-npm install @idleberg/vite-plugin-devcert @expo/devcert
+npm install @idleberg/vite-plugin-devcert
 ```
 
 On Deno you will likely want to use JSR:
 
 ```shell
-deno add jsr:@idleberg/vite-plugin-devcert npm:@expo/devcert
+deno add jsr:@idleberg/vite-plugin-devcert
 ```
+
+> [!NOTE]
+> Unless you have set `auto-install-peers=true`, you might need to install `@expo/devcert` manually.
 
 ## Usage
 
