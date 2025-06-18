@@ -5,6 +5,7 @@ import DevcertPlugin from './plugin.ts';
 vi.mock('@expo/devcert', () => ({
 	certificateFor: vi.fn().mockResolvedValue({ key: 'mock-key', cert: 'mock-cert' }),
 }));
+
 vi.mock('log-symbols', () => ({
 	default: { warning: '!' },
 }));
