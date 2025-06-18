@@ -26,7 +26,7 @@ deno add jsr:@idleberg/vite-plugin-devcert
 ```
 
 > [!NOTE]
-> Unless you have set `auto-install-peers=true`, you might need to install `@expo/devcert` manually.
+> Unless your package manager is set up to install peer dependencies automatically, you need to install `@expo/devcert` yourself.
 
 ## Usage
 
