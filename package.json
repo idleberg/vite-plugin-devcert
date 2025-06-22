@@ -54,7 +54,7 @@
 		"@playwright/test": "^1.53.1",
 		"@total-typescript/tsconfig": "^1.0.4",
 		"@types/node": "^22.15.32",
-		"concurrently": "^9.1.2",
+		"concurrently": "^9.2.0",
 		"lefthook": "^1.11.14",
 		"np": "^10.2.0",
 		"tsdown": "^0.12.8",
