@@ -1,6 +1,6 @@
 {
 	"name": "@idleberg/vite-plugin-devcert",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"exports": "./src/plugin.ts",
 	"imports": {
 		"@expo/devcert": "npm:@expo/devcert@^1.2.0"
