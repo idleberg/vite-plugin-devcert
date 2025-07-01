@@ -35,26 +35,15 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 
 			const domain = server?.host && typeof server.host === 'string' ? server.host : 'localhost';
 
-			console.info(
-				boxen(
-					// Keep lines short for better readability
-					[
-						`Generating a certificate for "${cyan(domain)}".`,
-						'You may be prompted to enter your password to allow the creation of a root certificate authority.',
-						`\n\nFor details, please refer to the documentation at ${underline('https://github.com/expo/devcert#how-it-works')}.`,
-					]
-						.join(' ')
-						.trim(),
-					{
-						borderColor: 'yellow',
-						margin: {
-							top: 1,
-							bottom: 1,
-						},
-						padding: 1,
-						title: 'Info',
-					},
-				),
+			printInfoBox(
+				// Keep lines short for better readability
+				[
+					`Generating a certificate for "${cyan(domain)}".`,
+					'You may be prompted to enter your password to allow the creation of a root certificate authority.',
+					`\n\nFor details, please refer to the documentation at ${underline('https://github.com/expo/devcert#how-it-works')}.`,
+				]
+					.join(' ')
+					.trim(),
 			);
 
 			const { key, cert } = await certificateFor(domain, options);
@@ -72,4 +61,22 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 			};
 		},
 	};
+}
+
+/**
+ * Helper function for boxen library
+ * @param message The message to display in the box
+ */
+function printInfoBox(message: string): void {
+	console.info(
+		boxen(message, {
+			borderColor: 'yellow',
+			margin: {
+				top: 1,
+				bottom: 1,
+			},
+			padding: 1,
+			title: 'Info',
+		}),
+	);
 }
