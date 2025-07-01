@@ -11,6 +11,9 @@ importers:
       '@expo/devcert':
         specifier: ^1.2.0
         version: 1.2.0
+      boxen:
+        specifier: ^8.0.1
+        version: 8.0.1
       log-symbols:
         specifier: ^7.0.1
         version: 7.0.1

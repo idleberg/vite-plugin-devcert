@@ -1,4 +1,5 @@
 import { certificateFor } from '@expo/devcert';
+import boxen from 'boxen';
 import logSymbols from 'log-symbols';
 
 import type { Plugin, UserConfig } from 'vite';
@@ -34,12 +35,25 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 			const domain = server?.host && typeof server.host === 'string' ? server.host : 'localhost';
 
 			console.info(
-				// Keep lines short for better readability
-				[
-					`${logSymbols.info} Generatinga certificate for "${domain}".`,
-					'You may be prompted to enter your password to allow the creation of a root certificate authority.',
-					'\nPlease refer to documentation at https://github.com/expo/devcert#how-it-works for details.',
-				].join(' '),
+				boxen(
+					// Keep lines short for better readability
+					[
+						`Generating a certificate for "${domain}".`,
+						'You may be prompted to enter your password to allow the creation of a root certificate authority.',
+						'\n\nFor details, please refer to the documentation at https://github.com/expo/devcert#how-it-works',
+					]
+						.join(' ')
+						.trim(),
+					{
+						borderColor: 'yellow',
+						margin: {
+							top: 1,
+							bottom: 1,
+						},
+						padding: 1,
+						title: 'Info',
+					},
+				),
 			);
 
 			const { key, cert } = await certificateFor(domain, options);

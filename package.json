@@ -45,6 +45,7 @@
 		"test:unit": "vitest run --dir src"
 	},
 	"dependencies": {
+		"boxen": "^8.0.1",
 		"log-symbols": "^7.0.1"
 	},
 	"devDependencies": {
