@@ -1,3 +1,4 @@
+import { env } from 'node:process';
 import { certificateFor } from '@expo/devcert';
 import boxen from 'boxen';
 import { cyan, underline } from 'kleur/colors';
@@ -69,7 +70,7 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
  */
 function box(message: string): string {
 	return boxen(message.trim(), {
-		borderColor: 'yellow',
+		borderColor: env.NO_COLOR ? undefined : 'yellow',
 		margin: {
 			top: 1,
 			bottom: 1,
