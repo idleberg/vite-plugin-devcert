@@ -46,6 +46,7 @@
 	},
 	"dependencies": {
 		"boxen": "^8.0.1",
+		"kleur": "^4.1.5",
 		"log-symbols": "^7.0.1"
 	},
 	"devDependencies": {

@@ -1,5 +1,6 @@
 import { certificateFor } from '@expo/devcert';
 import boxen from 'boxen';
+import { cyan, underline } from 'kleur/colors';
 import logSymbols from 'log-symbols';
 
 import type { Plugin, UserConfig } from 'vite';
@@ -38,9 +39,9 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 				boxen(
 					// Keep lines short for better readability
 					[
-						`Generating a certificate for "${domain}".`,
+						`Generating a certificate for "${cyan(domain)}".`,
 						'You may be prompted to enter your password to allow the creation of a root certificate authority.',
-						'\n\nFor details, please refer to the documentation at https://github.com/expo/devcert#how-it-works',
+						`\n\nFor details, please refer to the documentation at ${underline('https://github.com/expo/devcert#how-it-works')}.`,
 					]
 						.join(' ')
 						.trim(),
