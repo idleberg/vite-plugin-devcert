@@ -70,12 +70,12 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
  */
 function box(message: string): string {
 	return boxen(message.trim(), {
-		borderColor: env.NO_COLOR ? undefined : 'yellow',
+		borderColor: env.NO_COLOR ? undefined : 'blue',
 		margin: {
 			top: 1,
 			bottom: 1,
 		},
 		padding: 1,
-		title: 'Info',
+		title: 'vite-plugin-devcert',
 	});
 }
