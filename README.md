@@ -11,7 +11,7 @@
 > [!IMPORTANT]
 > This plugin is based on [`@expo/devcert`](https://www.npmjs.com/package/@expo/devcert), an actively maintained fork of `devcert`. Read about [how it works](https://github.com/expo/devcert/#how-it-works) and [its implications on security](https://github.com/expo/devcert/#security-concerns).
 
-## Installation
+## Installation 💿
 
 On NodeJS or Bun, install from npm:
 
@@ -28,7 +28,7 @@ deno add jsr:@idleberg/vite-plugin-devcert
 > [!NOTE]
 > Unless your package manager is set up to install peer dependencies automatically, you need to install `@expo/devcert` yourself.
 
-## Usage
+## Usage 🚀
 
 ```javascript
 import { defineConfig } from "vite";
@@ -39,7 +39,7 @@ export default defineConfig({
 });
 ```
 
-### API
+### API ⚙️
 
 `devcert(options?)`
 
@@ -53,11 +53,11 @@ If `certutil` is not installed already (for updating NSS databases; e.g. Firefox
 
 Do not update your systems host file with the domain name of the certificate. [Read the documentation for more](https://github.com/expo/devcert#skipcertutil).
 
-## Related
+## Related 👫
 
 - [vite-plugin-basic-ssl](https://www.npmjs.com/package/@vitejs/plugin-basic-ssl)
 - [vite-plugin-mkcert](https://www.npmjs.com/package/vite-plugin-mkcert)
 
-## License
+## License 📜
 
 This work is licensed under [The MIT License](LICENSE).
