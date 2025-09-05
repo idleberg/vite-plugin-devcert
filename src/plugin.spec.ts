@@ -20,7 +20,7 @@ describe('DevcertPlugin', () => {
 		const plugin = DevcertPlugin();
 		const userConfig = { server: { https: { key: 'a', cert: 'b' } } };
 
-		// @ts-ignore It's a test, so we can ignore type errors
+		// @ts-expect-error It's a test, so we can ignore type errors
 		const result = await plugin.config(userConfig, { command: 'serve' });
 
 		expect(warn).toHaveBeenCalledWith('! Skipping devcert, key and cert already provided.');
@@ -32,7 +32,7 @@ describe('DevcertPlugin', () => {
 		const plugin = DevcertPlugin();
 		const userConfig = { server: {} };
 
-		// @ts-ignore It's a test, so we can ignore type errors
+		// @ts-expect-error It's a test, so we can ignore type errors
 		const result = await plugin.config(userConfig, { command: 'serve' });
 
 		expect(result?.server?.https?.key).toBe('mock-key');
@@ -43,7 +43,7 @@ describe('DevcertPlugin', () => {
 		const plugin = DevcertPlugin();
 		const userConfig = { server: {} };
 
-		// @ts-ignore It's a test, so we can ignore type errors
+		// @ts-expect-error It's a test, so we can ignore type errors
 		const result = await plugin.config(userConfig, { command: 'build' });
 
 		expect(result).toBeUndefined();
