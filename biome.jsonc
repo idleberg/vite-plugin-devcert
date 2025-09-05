@@ -4,10 +4,11 @@
 	"files": {
 		"includes": [
 			"*.ts",
-			"*.json",
+			"**/*.json",
 			"src/**",
 			"test/**",
 			"!dist",
+			"!coverage",
 			"!package.json",
 			"!test-results"
 		]
