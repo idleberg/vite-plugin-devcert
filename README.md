@@ -58,6 +58,6 @@ Do not update your systems host file with the domain name of the certificate. [R
 - [vite-plugin-basic-ssl](https://www.npmjs.com/package/@vitejs/plugin-basic-ssl)
 - [vite-plugin-mkcert](https://www.npmjs.com/package/vite-plugin-mkcert)
 
-## License 📜
+## License ©️
 
 This work is licensed under [The MIT License](LICENSE).
