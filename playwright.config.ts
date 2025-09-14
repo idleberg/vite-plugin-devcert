@@ -4,6 +4,7 @@ import { defineConfig } from '@playwright/test';
 export default defineConfig({
 	retries: 3,
 	testDir: 'e2e',
+	testIgnore: '**/vite.*.ts',
 	use: {
 		trace: 'on-first-retry',
 	},
