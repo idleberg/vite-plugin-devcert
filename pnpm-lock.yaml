@@ -21,15 +21,15 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1
     devDependencies:
-      '@biomejs/biome':
-        specifier: ^2.2.4
-        version: 2.2.4
       '@commitlint/cli':
         specifier: ^19.8.1
         version: 19.8.1(@types/node@24.4.0)(typescript@5.9.2)
       '@commitlint/config-conventional':
         specifier: ^19.8.1
         version: 19.8.1
+      '@idleberg/configs':
+        specifier: ^0.1.0
+        version: 0.1.0(@biomejs/biome@2.2.4)(lefthook@1.13.0)
       '@playwright/test':
         specifier: ^1.55.0
         version: 1.55.0
@@ -380,6 +380,12 @@ packages:
 
   '@expo/sudo-prompt@9.3.2':
     resolution: {integrity: sha512-HHQigo3rQWKMDzYDLkubN5WQOYXJJE2eNqIQC2axC2iO3mHdwnIR7FgZVvHWtBwAdzBgAP0ECp8KqS8TiMKvgw==}
+
+  '@idleberg/configs@0.1.0':
+    resolution: {integrity: sha512-ACpQC3GMEggg4IbPZ9l2uZ0PjH4WV+0XPldGdyx178yfhQqypfIsEAN8QzvOEjs3UdhNwZYIAK4Lw5wZqQj2hQ==}
+    peerDependencies:
+      '@biomejs/biome': ^2.2.4
+      lefthook: ^1.13.0
 
   '@inquirer/checkbox@4.1.8':
     resolution: {integrity: sha512-d/QAsnwuHX2OPolxvYcgSj7A9DO9H6gVOy2DvBTx+P2LH2iRTo/RSGV3iwCzW024nP9hw98KIuDmdyhZQj1UQg==}
@@ -2813,6 +2819,11 @@ snapshots:
       - supports-color
 
   '@expo/sudo-prompt@9.3.2': {}
+
+  '@idleberg/configs@0.1.0(@biomejs/biome@2.2.4)(lefthook@1.13.0)':
+    dependencies:
+      '@biomejs/biome': 2.2.4
+      lefthook: 1.13.0
 
   '@inquirer/checkbox@4.1.8(@types/node@24.4.0)':
     dependencies:
