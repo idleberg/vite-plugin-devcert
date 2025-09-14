@@ -19,3 +19,6 @@ block_comment_end = */
 
 [*.{markdown,md}]
 trim_trailing_whitespace = false
+
+[package.json]
+insert_final_newline = true
