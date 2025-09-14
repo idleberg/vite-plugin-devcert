@@ -51,17 +51,17 @@
 		"log-symbols": "^7.0.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.2.2",
+		"@biomejs/biome": "^2.2.4",
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
 		"@playwright/test": "^1.55.0",
-		"@types/node": "^24.3.1",
+		"@types/node": "^24.4.0",
 		"concurrently": "^9.2.1",
-		"lefthook": "^1.12.3",
+		"lefthook": "^1.13.0",
 		"np": "^10.2.0",
-		"tsdown": "^0.14.2",
+		"tsdown": "^0.15.1",
 		"typescript": "^5.9.2",
-		"vite": "^7.1.4",
+		"vite": "^7.1.5",
 		"vitest": "^3.2.4"
 	},
 	"peerDependencies": {
