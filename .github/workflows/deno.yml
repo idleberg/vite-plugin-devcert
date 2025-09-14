@@ -55,5 +55,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          deno run --allow-all npm:vitest run --dir src
+          deno run --allow-all npm:vitest run
           # deno run --allow-all npm:playwright test
