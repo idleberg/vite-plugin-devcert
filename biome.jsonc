@@ -1,36 +1,71 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
-	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+
+	/**
+	 * @see {@link https://biomejs.dev/guides/integrate-in-vcs/}
+	 */
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	},
+
+	/**
+	 * @see {@link https://biomejs.dev/assist/}
+	 */
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+
+	/**
+	 * @see {@link https://biomejs.dev/reference/configuration/#files}
+	 */
 	"files": {
+		"ignoreUnknown": true,
 		"includes": [
-			"*.ts",
+			"**/*.js",
+			"**/*.mjs",
+			"**/*.cjs",
+
 			"**/*.json",
-			"src/**",
-			"test/**",
-			"!dist",
-			"!coverage",
-			"!package.json",
-			"!test-results"
+			"**/*.jsonc",
+
+			"**/*.ts",
+			"**/*.mts",
+			"**/*.cts"
 		]
 	},
+
+	/**
+	 * @see {@link https://biomejs.dev/linter/}
+	 */
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true,
 			"style": {
+				"noInferrableTypes": "error",
 				"noParameterAssign": "error",
+				"noUnusedTemplateLiteral": "error",
 				"useAsConstAssertion": "error",
+				"useExportType": "error",
 				"useDefaultParameterLast": "error",
 				"useEnumInitializers": "error",
-				"useSelfClosingElements": "error",
-				"useSingleVarDeclarator": "error",
-				"noUnusedTemplateLiteral": "error",
 				"useNumberNamespace": "error",
-				"noInferrableTypes": "error",
-				"noUselessElse": "error"
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error"
 			}
 		}
 	},
+
+	/**
+	 * @see {@link https://biomejs.dev/formatter/}
+	 */
 	"formatter": {
 		"useEditorconfig": true
 	},
