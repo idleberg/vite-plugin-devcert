@@ -1,6 +1,6 @@
 {
 	"name": "@idleberg/vite-plugin-devcert",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "A Vite plugin to generate trusted SSL/TLS certificates for local development",
 	"license": "MIT",
 	"author": "Jan T. Sott",
