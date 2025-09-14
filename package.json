@@ -45,7 +45,6 @@
 		"test:unit": "vitest run --exclude e2e"
 	},
 	"dependencies": {
-		"@total-typescript/tsconfig": "^1.0.4",
 		"boxen": "^8.0.1",
 		"kleur": "^4.1.5",
 		"log-symbols": "^7.0.1"
@@ -55,6 +54,7 @@
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
 		"@playwright/test": "^1.55.0",
+		"@total-typescript/tsconfig": "^1.0.4",
 		"@types/node": "^24.4.0",
 		"concurrently": "^9.2.1",
 		"lefthook": "^1.13.0",
