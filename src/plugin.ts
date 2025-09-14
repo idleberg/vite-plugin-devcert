@@ -19,6 +19,8 @@ type PluginOptions = {
  * @returns a Vite plugin
  */
 export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
+	let didShowInfo = false;
+
 	return {
 		name: '@idleberg/vite-plugin-devcert',
 		config: async (userConfig: UserConfig, { command }) => {
@@ -36,16 +38,20 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 
 			const domain = server?.host && typeof server.host === 'string' ? server.host : 'localhost';
 
-			console.info(
-				box(
-					// Keep lines short for better readability
-					[
-						`Generating a certificate for "${cyan(domain)}".`,
-						'You may be prompted to enter your password to allow the creation of a root certificate authority.',
-						`\n\nFor details, please refer to the Expo documentation at ${underline('https://github.com/expo/devcert#how-it-works')}.`,
-					].join(' '),
-				),
-			);
+			if (!didShowInfo) {
+				console.info(
+					box(
+						// Keep lines short for better readability
+						[
+							`Generating a certificate for "${cyan(domain)}".`,
+							'You may be prompted to enter your password to allow the creation of a root certificate authority.',
+							`\n\nFor details, please refer to the Expo documentation at ${underline('https://github.com/expo/devcert#how-it-works')}.`,
+						].join(' '),
+					),
+				);
+
+				didShowInfo = true;
+			}
 
 			const { key, cert } = await certificateFor(domain, options);
 
