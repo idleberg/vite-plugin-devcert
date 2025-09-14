@@ -42,7 +42,7 @@
 		"server:https": "vite --config e2e/vite.config-https.ts",
 		"test": "concurrently -n 'server,client' -c 'blue,green' 'npm:test:*'",
 		"test:e2e": "playwright test",
-		"test:unit": "vitest run --dir src"
+		"test:unit": "vitest run"
 	},
 	"dependencies": {
 		"@total-typescript/tsconfig": "^1.0.4",
