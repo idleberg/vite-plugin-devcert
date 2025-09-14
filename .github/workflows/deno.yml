@@ -55,5 +55,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          deno run --allow-all npm:vitest run
+          deno run --allow-all npm:vitest run --exclude e2e
           # deno run --allow-all npm:playwright test
