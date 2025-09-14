@@ -1,7 +1,3 @@
 {
-	"recommendations": [
-		"biomejs.biome",
-		"editorconfig.editorconfig",
-		"kamadorueda.alejandra"
-	]
+	"recommendations": ["biomejs.biome", "editorconfig.editorconfig"]
 }

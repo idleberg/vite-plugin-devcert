@@ -1,4 +1,8 @@
 {
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.biome": "explicit",
+		"source.fixAll.biome": "explicit"
+	},
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"[javascript]": {
@@ -9,9 +13,6 @@
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[nix]": {
-		"editor.defaultFormatter": "kamadorueda.alejandra"
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "biomejs.biome"
