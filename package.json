@@ -52,9 +52,8 @@
 	"devDependencies": {
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
-		"@idleberg/configs": "^0.1.0",
+		"@idleberg/configs": "^0.2.0",
 		"@playwright/test": "^1.55.0",
-		"@total-typescript/tsconfig": "^1.0.4",
 		"@types/node": "^24.4.0",
 		"concurrently": "^9.2.1",
 		"lefthook": "^1.13.0",

@@ -1,11 +1,3 @@
 {
-	"extends": "@total-typescript/tsconfig/tsc/no-dom/library",
-	"compilerOptions": {
-		"allowImportingTsExtensions": true,
-		"lib": ["dom"],
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"noEmit": true,
-		"types": ["vitest/globals"]
-	}
+	"extends": "@idleberg/configs/tsconfig"
 }
