@@ -52,14 +52,14 @@
 	"devDependencies": {
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
-		"@idleberg/configs": "^0.2.0",
+		"@idleberg/configs": "^0.3.1",
 		"@playwright/test": "^1.55.0",
-		"@types/node": "^24.4.0",
+		"@types/node": "^24.5.2",
 		"concurrently": "^9.2.1",
 		"np": "^10.2.0",
-		"tsdown": "^0.15.1",
+		"tsdown": "^0.15.2",
 		"typescript": "^5.9.2",
-		"vite": "^7.1.5",
+		"vite": "^7.1.6",
 		"vitest": "^3.2.4"
 	},
 	"peerDependencies": {
