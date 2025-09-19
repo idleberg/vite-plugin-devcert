@@ -34,7 +34,7 @@ jobs:
           deno cache npm:@expo/devcert npm:vite \
             --allow-scripts \
             --no-lock \
-            --node-modules-dir auto
+            --node-modules-dir=auto
 
       - run: |
           deno lint --ignore=node_modules **/*.ts
