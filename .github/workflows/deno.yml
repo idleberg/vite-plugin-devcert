@@ -51,11 +51,11 @@ jobs:
             --no-lock \
             --node-modules-dir=auto
 
-      # - name: Install Playwright browsers
-      #   run: deno run --allow-all npm:playwright install --with-deps
-
       - name: Lint Source
         run: deno lint --ignore=node_modules **/*.ts
+
+      # - name: Install Playwright browsers
+      #   run: deno run --allow-all npm:playwright install --with-deps
 
       - name: Run Tests
         run: |
