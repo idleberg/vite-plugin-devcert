@@ -6,7 +6,7 @@
 		"@expo/devcert": "npm:@expo/devcert@^1.2.0"
 	},
 	"publish": {
-		"include": ["src/", "jsr.json", "LICENSE", "README.md"]
+		"include": ["src/plugin.ts", "jsr.json", "LICENSE", "README.md"]
 	},
 	"compilerOptions": {
 		"lib": ["deno.window"]
