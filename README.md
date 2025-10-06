@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/github/license/idleberg/vite-plugin-devcert?color=blue&style=for-the-badge)](https://github.com/idleberg/vite-plugin-devcert/blob/main/LICENSE)
 [![Version: npm](https://img.shields.io/npm/v/@idleberg/vite-plugin-devcert?style=for-the-badge)](https://www.npmjs.org/package/@idleberg/vite-plugin-devcert)
 [![Version: jsr](https://img.shields.io/jsr/v/@idleberg/vite-plugin-devcert?style=for-the-badge)](https://jsr.io/@idleberg/vite-plugin-devcert)
-[![CI: Node](https://img.shields.io/github/actions/workflow/status/idleberg/vite-plugin-devcert/node.yml?logo=nodedotjs&logoColor=white&style=for-the-badge)](https://github.com/idleberg/vite-plugin-devcert/actions/workflows/node.yml)
-[![CI: Deno](https://img.shields.io/github/actions/workflow/status/idleberg/vite-plugin-devcert/deno.yml?logo=deno&logoColor=white&style=for-the-badge)](https://github.com/idleberg/vite-plugin-devcert/actions/workflows/deno.yml)
+![GitHub branch check runs](https://img.shields.io/github/check-runs/idleberg/vite-plugin-devcert/main?style=for-the-badge)
+
 
 > [!IMPORTANT]
 > This plugin is based on [`@expo/devcert`](https://www.npmjs.com/package/@expo/devcert), an actively maintained fork of `devcert`. Read about [how it works](https://github.com/expo/devcert/#how-it-works) and [its implications on security](https://github.com/expo/devcert/#security-concerns).
