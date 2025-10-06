@@ -11,9 +11,25 @@ jobs:
     permissions:
       contents: read
       id-token: write
+
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 10
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - uses: actions/cache@v4
+        name: Set up Deno cache
+        with:
+          path: |
+            ~/.deno
+            ~/.cache/deno
+          key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
+
       - run: |
-          npx jsr install --pnpm
-          npx jsr publish --dry-run
-          npx jsr publish
+          deno install --pnpm
+          deno publish --dry-run
+          deno publish
