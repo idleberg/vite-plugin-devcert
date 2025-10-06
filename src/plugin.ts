@@ -23,8 +23,8 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 
 	return {
 		name: '@idleberg/vite-plugin-devcert',
-		config: async (userConfig: UserConfig, { command, mode }) => {
-			if (command !== 'serve' || mode !== 'development') {
+		config: async (userConfig: UserConfig, { command }) => {
+			if (command !== 'serve') {
 				return;
 			}
 
