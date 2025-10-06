@@ -14,5 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - run: |
+          npx jsr install --pnpm
           npx jsr publish --dry-run
           npx jsr publish
