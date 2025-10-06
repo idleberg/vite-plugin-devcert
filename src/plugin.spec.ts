@@ -21,7 +21,7 @@ describe('DevcertPlugin', () => {
 		const userConfig = { server: { https: { key: 'a', cert: 'b' } } };
 
 		// @ts-expect-error It's a test, so we can ignore type errors
-		const result = await plugin.config(userConfig, { command: 'serve' });
+		const result = await plugin.config(userConfig, { command: 'serve', mode: 'development' });
 
 		expect(warn).toHaveBeenCalledWith('! Skipping devcert, key and cert already provided.');
 		expect(result).toBe(userConfig);
@@ -33,7 +33,7 @@ describe('DevcertPlugin', () => {
 		const userConfig = { server: {} };
 
 		// @ts-expect-error It's a test, so we can ignore type errors
-		const result = await plugin.config(userConfig, { command: 'serve' });
+		const result = await plugin.config(userConfig, { command: 'serve', mode: 'development' });
 
 		expect(result?.server?.https?.key).toBe('mock-key');
 		expect(result?.server?.https?.cert).toBe('mock-cert');
@@ -45,6 +45,16 @@ describe('DevcertPlugin', () => {
 
 		// @ts-expect-error It's a test, so we can ignore type errors
 		const result = await plugin.config(userConfig, { command: 'build' });
+
+		expect(result).toBeUndefined();
+	});
+
+	it('does nothing if mode is not development', async () => {
+		const plugin = DevcertPlugin();
+		const userConfig = { server: {} };
+
+		// @ts-expect-error It's a test, so we can ignore type errors
+		const result = await plugin.config(userConfig, { mode: 'production' });
 
 		expect(result).toBeUndefined();
 	});
