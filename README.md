@@ -27,9 +27,6 @@ deno add jsr:@idleberg/vite-plugin-devcert
 
 ## Usage 🚀
 
-> [!NOTE]
-> As a precaution, this plugin is only available in [development mode](https://vite.dev/guide/env-and-mode.html#modes).
-
 ```javascript
 import { defineConfig } from "vite";
 import devcert from "@idleberg/vite-plugin-devcert";
