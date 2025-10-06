@@ -25,10 +25,10 @@ On Deno you will likely want to use JSR:
 deno add jsr:@idleberg/vite-plugin-devcert
 ```
 
-> [!NOTE]
-> Unless your package manager is set up to install peer dependencies automatically, you need to install `@expo/devcert` yourself.
-
 ## Usage 🚀
+
+> [!NOTE]
+> As a precaution, this plugin is only available in [development mode](https://vite.dev/guide/env-and-mode.html#modes).
 
 ```javascript
 import { defineConfig } from "vite";
