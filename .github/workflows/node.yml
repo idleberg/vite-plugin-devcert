@@ -29,7 +29,7 @@ jobs:
         vite-version: ["vite@5", "vite@6", "vite@7"]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 10
 
