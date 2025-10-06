@@ -1,5 +1,0 @@
-{
-	"publish": {
-		"include": ["src/", "jsr.json", "LICENSE", "README.md"]
-	}
-}
