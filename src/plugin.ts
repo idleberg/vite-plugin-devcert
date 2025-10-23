@@ -7,6 +7,7 @@ import logSymbols from 'log-symbols';
 import type { Plugin, UserConfig } from 'vite';
 
 type PluginOptions = {
+	hideInfoBox?: boolean;
 	skipHostsFile?: boolean;
 	skipCertutil?: boolean;
 };
@@ -19,8 +20,6 @@ type PluginOptions = {
  * @returns a Vite plugin
  */
 export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
-	let didShowInfo = false;
-
 	return {
 		name: '@idleberg/vite-plugin-devcert',
 		config: async (userConfig: UserConfig, { command }) => {
@@ -37,8 +36,9 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 			}
 
 			const domain = server?.host && typeof server.host === 'string' ? server.host : 'localhost';
+			const { hideInfoBox, ...certOptions } = options;
 
-			if (!didShowInfo) {
+			if (Boolean(hideInfoBox) === false) {
 				console.info(
 					box(
 						// Keep lines short for better readability
@@ -49,11 +49,9 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 						].join(' '),
 					),
 				);
-
-				didShowInfo = true;
 			}
 
-			const { key, cert } = await certificateFor(domain, options);
+			const { key, cert } = await certificateFor(domain, certOptions);
 
 			return {
 				...userConfig,

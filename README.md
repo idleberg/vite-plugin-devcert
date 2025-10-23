@@ -50,6 +50,10 @@ If `certutil` is not installed already (for updating NSS databases; e.g. Firefox
 
 Do not update your systems host file with the domain name of the certificate. [Read the Expo documentation for more](https://github.com/expo/devcert#skipcertutil).
 
+#### `options.hideInfoBox`
+
+Hide the info box displayed at startup.
+
 ## Related 👫
 
 - [vite-plugin-basic-ssl](https://www.npmjs.com/package/@vitejs/plugin-basic-ssl)
