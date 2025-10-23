@@ -59,8 +59,8 @@
 		"np": "^10.2.0",
 		"tsdown": "^0.15.9",
 		"typescript": "^5.9.3",
-		"vite": "^7.1.11",
-		"vitest": "^4.0.1"
+		"vite": "^7.1.12",
+		"vitest": "^4.0.2"
 	},
 	"peerDependencies": {
 		"@expo/devcert": "^1.2.0",
