@@ -56,6 +56,8 @@ Hide the info box displayed at startup.
 
 ## Related 👫
 
+If this project is not for you, maybe these alternatives suit you better:
+
 - [vite-plugin-basic-ssl](https://www.npmjs.com/package/@vitejs/plugin-basic-ssl)
 - [vite-plugin-mkcert](https://www.npmjs.com/package/vite-plugin-mkcert)
 
