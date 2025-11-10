@@ -32,7 +32,9 @@
 	"scripts": {
 		"build": "tsdown",
 		"dev": "tsdown --watch",
-		"lint": "biome check",
+		"lint": "concurrently --prefix-colors blue,green,magenta npm:lint:*",
+		"lint:biome": "biome check",
+		"lint:e18e": "e18e-cli analyze",
 		"prepack": "npm run build",
 		"prepare": "lefthook install",
 		"publish:jsr": "deno publish",
@@ -52,6 +54,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^20.1.0",
 		"@commitlint/config-conventional": "^20.0.0",
+		"@e18e/cli": "^0.3.1",
 		"@idleberg/configs": "^0.3.1",
 		"@playwright/test": "^1.56.1",
 		"@types/node": "^24.9.1",
