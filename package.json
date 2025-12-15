@@ -54,7 +54,6 @@
 	"devDependencies": {
 		"@commitlint/cli": "^20.2.0",
 		"@commitlint/config-conventional": "^20.2.0",
-		"@e18e/cli": "^0.3.1",
 		"@idleberg/configs": "^0.4.1",
 		"@playwright/test": "^1.57.0",
 		"@types/node": "^24.9.1",
