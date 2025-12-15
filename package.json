@@ -52,18 +52,18 @@
 		"log-symbols": "^7.0.1"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^20.1.0",
-		"@commitlint/config-conventional": "^20.0.0",
+		"@commitlint/cli": "^20.2.0",
+		"@commitlint/config-conventional": "^20.2.0",
 		"@e18e/cli": "^0.3.1",
-		"@idleberg/configs": "^0.3.1",
-		"@playwright/test": "^1.56.1",
+		"@idleberg/configs": "^0.4.1",
+		"@playwright/test": "^1.57.0",
 		"@types/node": "^24.9.1",
 		"concurrently": "^9.2.1",
 		"np": "^10.2.0",
-		"tsdown": "^0.15.9",
+		"tsdown": "^0.18.0",
 		"typescript": "^5.9.3",
-		"vite": "^7.1.12",
-		"vitest": "^3.2.4"
+		"vite": "^7.3.0",
+		"vitest": "^4.0.15"
 	},
 	"peerDependencies": {
 		"@expo/devcert": "^1.2.0",
