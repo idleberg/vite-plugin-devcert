@@ -17,10 +17,9 @@
 	],
 	"type": "module",
 	"exports": {
-		"types": "./dist/plugin.d.ts",
-		"import": "./dist/plugin.js"
+		"types": "./dist/plugin.d.mts",
+		"import": "./dist/plugin.mjs"
 	},
-	"types": "./dist/plugin.d.ts",
 	"engines": {
 		"node": "^20.19.0 || >=22.12.0"
 	},
@@ -59,10 +58,10 @@
 		"@types/node": "^24.9.1",
 		"concurrently": "^9.2.1",
 		"np": "^10.2.0",
-		"tsdown": "^0.18.0",
+		"tsdown": "^0.18.1",
 		"typescript": "^5.9.3",
 		"vite": "^7.3.0",
-		"vitest": "^4.0.15"
+		"vitest": "^4.0.16"
 	},
 	"peerDependencies": {
 		"@expo/devcert": "^1.2.0",
