@@ -17,6 +17,7 @@ type PluginOptions = {
  * @param options Options passed on to `@expo/devcert`
  * @param options.skipHostsFile If `certutil` is not installed already (for updating NSS databases; e.g. Firefox), do not attempt to install it {@see {@link https://github.com/expo/devcert#skiphostsfile}}
  * @param options.skipCertutil Do not update your systems host file with the domain name of the certificate {@see {@link https://github.com/expo/devcert#skipcertutil}}
+ * @param options.hideInfoBox Hide the info box displayed at startup
  * @returns a Vite plugin
  */
 export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
