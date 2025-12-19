@@ -26,7 +26,7 @@ jobs:
       fail-fast: false
       matrix:
         node-version: ["lts/*", "latest"]
-        vite-version: ["vite@5", "vite@6", "vite@7"]
+        vite-version: ["vite@5", "vite@6", "vite@7", "vite@8.0.0-beta.0"]
 
     steps:
       - uses: actions/checkout@v5
