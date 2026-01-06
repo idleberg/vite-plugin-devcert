@@ -9,6 +9,7 @@
 
 
 > [!IMPORTANT]
+> 
 > This plugin is based on [`@expo/devcert`](https://www.npmjs.com/package/@expo/devcert), an actively maintained fork of `devcert`. Read about [how it works](https://github.com/expo/devcert/#how-it-works) and [its implications on security](https://github.com/expo/devcert/#security-concerns).
 
 ## Installation 💿
