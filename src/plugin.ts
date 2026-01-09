@@ -60,8 +60,8 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 					...server,
 					https: {
 						...server?.https,
-						key: key ?? undefined,
-						cert: cert ?? undefined,
+						key: key || undefined,
+						cert: cert || undefined,
 					},
 				},
 			};
