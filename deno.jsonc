@@ -3,7 +3,7 @@
 	"version": "0.5.1",
 	"exports": "./src/plugin.ts",
 	"imports": {
-		"@expo/devcert": "npm:@expo/devcert@^1.2.0"
+		"@expo/devcert": "npm:@expo/devcert@^1.2.1"
 	},
 	"publish": {
 		"include": ["src/plugin.ts", "jsr.json", "LICENSE", "README.md"]
