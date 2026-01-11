@@ -52,19 +52,31 @@ export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 				);
 			}
 
-			const { key, cert } = await certificateFor(domain, certOptions);
+			try {
+				const { key, cert } = await certificateFor(domain, certOptions);
 
-			return {
-				...userConfig,
-				server: {
-					...server,
-					https: {
-						...server?.https,
-						key: key || undefined,
-						cert: cert || undefined,
+				if (!key || !cert) {
+					console.error(`${logSymbols.error} Failed to generate certificates`);
+
+					return userConfig;
+				}
+
+				return {
+					...userConfig,
+					server: {
+						...server,
+						https: {
+							...(typeof server?.https === 'object' ? server.https : {}),
+							key,
+							cert,
+						},
 					},
-				},
-			};
+				};
+			} catch (error) {
+				console.error(`${logSymbols.error} Certificate generation failed:`, error);
+
+				return userConfig;
+			}
 		},
 	};
 }
