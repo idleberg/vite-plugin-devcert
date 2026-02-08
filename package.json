@@ -37,7 +37,7 @@
 		"prepack": "npm run build",
 		"prepare": "lefthook install",
 		"publish:jsr": "deno publish",
-		"publish:npm": "np --any-branch",
+		"publish:npm": "np",
 		"server": "concurrently -n 'e2e,unit' -c 'blue,green' 'npm:server:*'",
 		"server:http": "vite --config e2e/vite.config-http.ts",
 		"server:https": "vite --config e2e/vite.config-https.ts",
