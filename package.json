@@ -35,7 +35,6 @@
 		"lint:biome": "biome check",
 		"lint:e18e": "e18e-cli analyze",
 		"prepack": "npm run build",
-		"prepare": "lefthook install",
 		"publish:jsr": "deno publish",
 		"publish:npm": "np",
 		"server": "concurrently -n 'e2e,unit' -c 'blue,green' 'npm:server:*'",
@@ -67,6 +66,11 @@
 	"peerDependencies": {
 		"@expo/devcert": "^1.2.1",
 		"vite": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-beta"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"lefthook"
+		]
 	},
 	"packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48"
 }
