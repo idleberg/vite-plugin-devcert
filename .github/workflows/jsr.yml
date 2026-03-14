@@ -31,7 +31,8 @@ jobs:
 
       - run: |
           deno approve-scripts lefthook
-          deno install
+          deno install \
+            --allow-scripts \
             --no-lock \
             --node-modules-dir=auto
           deno publish --dry-run

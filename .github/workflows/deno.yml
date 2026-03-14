@@ -39,7 +39,8 @@ jobs:
       - name: Install dependencies
         run: |
           deno approve-scripts lefthook
-          deno install
+          deno install \
+            --allow-scripts \
             --no-lock \
             --node-modules-dir=auto
 
