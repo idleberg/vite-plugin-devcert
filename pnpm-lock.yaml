@@ -53,7 +53,7 @@ importers:
         version: 8.0.0(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1)
       vitest:
         specifier: ^4.1.0
-        version: 4.1.0(@types/node@24.9.1)(vite@8.0.0(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1))
+        version: 4.1.0(@types/node@24.9.1)(vite@8(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1))
 
 packages:
 
@@ -2877,7 +2877,7 @@ packages:
     resolution: {integrity: sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  vite@8.0.0:
+  vite@8:
     resolution: {integrity: sha512-fPGaRNj9Zytaf8LEiBhY7Z6ijnFKdzU/+mL8EFBaKr7Vw1/FWcTBAMW0wLPJAGMPX38ZPVCVgLceWiEqeoqL2Q==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
@@ -3937,7 +3937,7 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.0(vite@8.0.0(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1))':
+  '@vitest/mocker@4.1.0(vite@8(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1))':
     dependencies:
       '@vitest/spy': 4.1.0
       estree-walker: 3.0.3
@@ -5701,7 +5701,7 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite@8.0.0(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1):
+  vite@8(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1):
     dependencies:
       '@oxc-project/runtime': 0.115.0
       lightningcss: 1.32.0
@@ -5715,10 +5715,10 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.6.1
 
-  vitest@4.1.0(@types/node@24.9.1)(vite@8.0.0(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1)):
+  vitest@4.1.0(@types/node@24.9.1)(vite@8(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1)):
     dependencies:
       '@vitest/expect': 4.1.0
-      '@vitest/mocker': 4.1.0(vite@8.0.0(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1))
+      '@vitest/mocker': 4.1.0(vite@8(@types/node@24.9.1)(esbuild@0.27.2)(jiti@2.6.1))
       '@vitest/pretty-format': 4.1.0
       '@vitest/runner': 4.1.0
       '@vitest/snapshot': 4.1.0
