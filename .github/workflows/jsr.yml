@@ -35,5 +35,6 @@ jobs:
             --allow-scripts \
             --no-lock \
             --node-modules-dir=auto
+          deno add npm:vite
           deno publish --dry-run
           deno publish
