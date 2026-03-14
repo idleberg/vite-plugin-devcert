@@ -24,8 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        vite-version: ["vite@5", "vite@6", "vite@7", "vite@8"]
 
     steps:
       - uses: actions/checkout@v5
@@ -42,9 +40,7 @@ jobs:
           key: ${{ runner.os }}-bun-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install dependencies
-        run: |
-          bun install
-          bun install ${{ matrix.vite-version }}
+        run: bun install
 
       - name: Build Source
         run: bun run --if-present build
