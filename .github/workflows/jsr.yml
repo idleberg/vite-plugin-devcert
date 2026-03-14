@@ -30,11 +30,6 @@ jobs:
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - run: |
-          deno approve-scripts lefthook
-          deno install \
-            --allow-scripts \
-            --no-lock \
-            --node-modules-dir=auto
-          deno add npm:vite --no-lock
+          deno install --no-lock --npm
           deno publish --dry-run
           deno publish
