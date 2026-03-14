@@ -16,8 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        vite-version: ["vite@5", "vite@6", "vite@7", "vite@8"]
 
     steps:
       - uses: actions/checkout@v5
@@ -35,13 +33,6 @@ jobs:
             ~/.deno
             ~/.cache/deno
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-      - name: Install Vite
-        run: |
-          deno cache npm:${{ matrix.vite-version }} \
-            --allow-scripts \
-            --no-lock \
-            --node-modules-dir=auto
 
       - name: Lint Source
         run: deno lint --ignore=node_modules **/*.ts
