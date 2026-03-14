@@ -4,7 +4,7 @@ import boxen from 'boxen';
 import { cyan, underline } from 'kleur/colors';
 import logSymbols from 'log-symbols';
 
-import type { Plugin, UserConfig } from 'vite';
+import type { ConfigEnv, Plugin, UserConfig } from 'vite';
 
 type PluginOptions = {
 	hideInfoBox?: boolean;
@@ -23,7 +23,7 @@ type PluginOptions = {
 export default function DevcertPlugin(options: PluginOptions = {}): Plugin {
 	return {
 		name: '@idleberg/vite-plugin-devcert',
-		config: async (userConfig: UserConfig, { command }) => {
+		config: async (userConfig: UserConfig, { command }: ConfigEnv) => {
 			if (command !== 'serve') {
 				return;
 			}
