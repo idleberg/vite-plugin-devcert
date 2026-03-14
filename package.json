@@ -52,7 +52,6 @@
 	"devDependencies": {
 		"@commitlint/cli": "^20.4.4",
 		"@commitlint/config-conventional": "^20.4.4",
-		"@expo/devcert": "^1.2.1",
 		"@idleberg/configs": "^0.4.2",
 		"@playwright/test": "^1.58.2",
 		"@types/node": "^24.12.0",
@@ -60,7 +59,6 @@
 		"np": "^11.0.2",
 		"tsdown": "^0.21.2",
 		"typescript": "^5.9.3",
-		"vite": "^8.0.0",
 		"vitest": "^4.1.0"
 	},
 	"peerDependencies": {
